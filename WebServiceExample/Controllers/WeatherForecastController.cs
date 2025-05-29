@@ -21,8 +21,8 @@ namespace WebServiceExample.Controllers
             return user;
         }
 
-        [HttpGet("test2")]
-        public String test2()
+        [HttpGet("helloworld")]
+        public String helloworld()
         {
             return "Ahoj svìte";
         }

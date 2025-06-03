@@ -23,6 +23,11 @@ namespace WebServiceExample
                 app.UseSwaggerUI();
             }
 
+            public string helloworld()
+            {
+                return "ahojahoj";
+            }
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

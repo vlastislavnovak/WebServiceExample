@@ -26,5 +26,10 @@ namespace WebServiceExample.Controllers
         {
             return "Ahoj svìte";
         }
+        [HttpGet("test3")]
+        public String test3()
+        {
+            return "Ahoj uživateli";
+        }
     }
 }

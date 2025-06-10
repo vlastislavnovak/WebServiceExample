@@ -12,13 +12,19 @@ namespace WebServiceExample.Controllers
             public DateTime BirthDate { get; set; }
         }
 
-        [HttpGet("test")]
-        public User test()
+        [HttpGet("get-user")]
+        public IActionResult getUser(int id)
         {
-            User user = new User();
-            user.Name = "Jan Skibidi";
-            user.BirthDate = DateTime.Now;
-            return user;
+            if (id == 1)
+            {
+                User user = new User();
+                user.Name = "Jan Skibidi";
+                user.BirthDate = DateTime.Now;
+                return Ok(user);
+            } else
+            {
+                return NotFound("Uživatel nebyl nalezen.");
+            }
         }
 
         [HttpGet("helloworld")]
